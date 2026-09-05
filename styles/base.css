@@ -1,6 +1,4 @@
-/* ================================
-   GLOBAL STYLES
-================================ */
+/* Global Style */
 
 :root {
     --primary-color: #006b5b;
@@ -27,28 +25,23 @@ body {
     line-height: 125%;
 }
 
-
-/* ================================
-   HEADER
-================================ */
+/* Header */
 
 header {
     background-color: var(--background-color);
 }
 
-header h1 {
+header #course-title {
+    display: block;
     margin: 0;
     padding: 20px;
     text-align: center;
     font-size: 2rem;
     color: var(--primary-color);
-    font-weight: 700;
+    font-weight: 300;
 }
 
-
-/* ================================
-   NAVIGATION
-================================ */
+/* Navigation */
 
 nav {
     background-color: var(--primary-color);
@@ -91,9 +84,7 @@ nav {
 }
 
 
-/* ================================
-   MAIN
-================================ */
+/* Main */
 
 main {
     max-width: 1100px;
@@ -110,10 +101,7 @@ main > h1 {
     color: #111111;
 }
 
-
-/* ================================
-   MAIN GRID
-================================ */
+/* Main Grid */
 
 .main-grid {
     display: grid;
@@ -122,10 +110,7 @@ main > h1 {
     align-items: stretch;
 }
 
-
-/* ================================
-   CARDS
-================================ */
+/* Card */
 
 .card {
     background-color: var(--card-background);
@@ -138,18 +123,7 @@ main > h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-
-/* ================================
-   CARD HEADERS
-================================ */
-
-/*
-   Your current HTML does not have a separate
-   heading inside each card.
-
-   These styles create the green heading
-   using a pseudo-element.
-*/
+/* Card Headers */
 
 .left-sidebar::before {
     content: "About Me";
@@ -184,18 +158,11 @@ main > h1 {
 }
 
 
-/* ================================
-   ABOUT ME CARD
-================================ */
+/* About Me */
 
 .left-sidebar {
     min-height: 550px;
 }
-
-
-/* ================================
-   INTRODUCTION
-================================ */
 
 .card-content {
     display: grid;
@@ -229,10 +196,7 @@ main > h1 {
     border: 1px solid #aaa;
 }
 
-
-/* ================================
-   COUNTRY SECTION
-================================ */
+/* Country Section */
 
 .about-my-country {
     display: grid;
@@ -249,11 +213,9 @@ main > h1 {
 }
 
 
-/* ================================
-   COUNTRY HEADING
-================================ */
+/* Country Heading */
 
-.about-my-country h2 {
+.about-my-country p {
     grid-column: 1 / -1;
 
     margin: 0;
@@ -267,10 +229,7 @@ main > h1 {
     border-bottom: 1px solid #bdbdbd;
 }
 
-
-/* ================================
-   COUNTRY FLAG
-================================ */
+/* Country section  */
 
 .about-my-country img {
     width: 160px;
@@ -283,10 +242,7 @@ main > h1 {
     border: 1px solid #bdbdbd;
 }
 
-
-/* ================================
-   FLAG CAPTION
-================================ */
+/* Flag Caption */
 
 .flag-caption {
     margin: 8px 0 0 !important;
@@ -299,11 +255,7 @@ main > h1 {
 
     line-height: 1.5 !important;
 }
-
-
-/* ================================
-   COUNTRY DESCRIPTION
-================================ */
+/* Country Caption */
 
 .about-my-country p {
     margin: 18px 0 0;
@@ -313,9 +265,7 @@ main > h1 {
     line-height: 1.65;
 }
 
-/* ================================
-   RIGHT SIDEBAR
-================================ */
+/* Right Bar */
 
 .right-sidebar {
     min-height: 550px;
@@ -345,11 +295,7 @@ main > h1 {
     color: var(--secondary-color);
 }
 
-
-
-/* ================================
-   LINKS
-================================ */
+/* Links */
 
 a {
     color: var(--link-color);
@@ -360,9 +306,7 @@ a:hover {
 }
 
 
-/* ================================
-   FOOTER
-================================ */
+/* Footer */
 
 .footer {
     margin-top: 0;
