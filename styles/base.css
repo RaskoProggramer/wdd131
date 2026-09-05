@@ -26,11 +26,6 @@ body {
 }
 
 /* Header */
-
-header {
-    background-color: var(--background-color);
-}
-
 header #course-title {
     display: block;
     margin: 0;
