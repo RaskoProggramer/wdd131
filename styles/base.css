@@ -1,0 +1,441 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+
+:root {
+    --primary-color: #006b5b;
+    --secondary-color: #004d40;
+    --accent-color: #1b8a70;
+    --link-color: #087f5b;
+    --text-color: #202124;
+    --light-text: #ffffff;
+    --background-color: #ffffff;
+    --card-background: #ffffff;
+    --border-color: #d0d0d0;
+    --footer-color: #004d40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    background-color: var(--background-color);
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav {
+    background-color: var(--primary-color);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navigation li {
+    flex: 1;
+    text-align: center;
+}
+
+.navigation a {
+    display: block;
+    padding: 14px 10px;
+
+    color: var(--light-text);
+    text-decoration: none;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+main > h1 {
+    margin: 0 0 25px;
+    text-align: center;
+
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: #111111;
+}
+
+
+/* ================================
+   MAIN GRID
+================================ */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.card {
+    background-color: var(--card-background);
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   CARD HEADERS
+================================ */
+
+/*
+   Your current HTML does not have a separate
+   heading inside each card.
+
+   These styles create the green heading
+   using a pseudo-element.
+*/
+
+.left-sidebar::before {
+    content: "About Me";
+
+    display: block;
+
+    padding: 12px;
+
+    background-color: var(--primary-color);
+    color: var(--light-text);
+
+    text-align: center;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.right-sidebar::before {
+    content: "Web Dev Resources";
+
+    display: block;
+
+    padding: 12px;
+
+    background-color: var(--primary-color);
+    color: var(--light-text);
+
+    text-align: center;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+/* ================================
+   ABOUT ME CONTENT
+================================ */
+
+.left-sidebar {
+    min-height: 550px;
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 25px;
+
+    padding: 25px;
+    align-items: start;
+}
+
+.card-content p {
+    margin: 0;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.card-content img {
+    width: 100%;
+    max-width: 200px;
+
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 8px;
+}
+
+
+/* ================================
+   COUNTRY SECTION
+================================ */
+
+.about-my-country {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 25px;
+
+    margin: 0 25px 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.about-my-country img {
+    width: 180px;
+    height: auto;
+
+    display: block;
+}
+
+.about-my-country p {
+    margin: 0;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.about-my-country h2 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.flag-caption {
+    margin-top: 8px !important;
+    text-align: center;
+    font-size: 0.9rem !important;
+    font-style: italic;
+}
+
+.about-my-country img {
+    width: 180px;
+    height: auto;
+    border: 1px solid var(--border-color);
+}
+
+/* ================================
+   RIGHT SIDEBAR
+================================ */
+
+.right-sidebar {
+    min-height: 550px;
+}
+
+.right-sidebar p {
+    margin: 30px;
+    font-size: 1rem;
+}
+
+.resource-list {
+    margin: 0;
+    padding: 60px 40px 40px 65px;
+}
+
+.resource-list li {
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.resource-list a {
+    color: var(--link-color);
+    font-size: 1.05rem;
+}
+
+.resource-list a:hover {
+    color: var(--secondary-color);
+}
+
+
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    margin-top: 0;
+
+    padding: 20px;
+
+    background-color: var(--footer-color);
+    color: var(--light-text);
+
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer #lastupdated {
+    color: #d4e157;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media screen and (max-width: 800px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    main > h1 {
+        font-size: 2.3rem;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        min-height: auto;
+    }
+
+    .card-content {
+        grid-template-columns: 1fr 160px;
+    }
+
+    .about-my-country {
+        grid-template-columns: 150px 1fr;
+    }
+
+    .about-my-country img {
+        width: 150px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        padding: 15px 10px;
+        font-size: 1.5rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation li {
+        width: 100%;
+    }
+
+    .navigation a {
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    main {
+        padding: 20px 12px;
+    }
+
+    main > h1 {
+        font-size: 2rem;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .card-content img {
+        order: -1;
+        max-width: 180px;
+    }
+
+    .about-my-country {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px 20px;
+    }
+
+    .about-my-country img {
+        width: 180px;
+        margin: 0 auto;
+    }
+
+    .about-my-country p {
+        text-align: center;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
