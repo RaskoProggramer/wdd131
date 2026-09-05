@@ -26,6 +26,11 @@ body {
 }
 
 /* Header */
+
+header {
+    margin: auto;
+}
+
 header #course-title {
     display: block;
     margin: 0;
