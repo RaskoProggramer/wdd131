@@ -136,17 +136,6 @@ main > h1 {
     font-weight: 700;
 }
 
-.left-sidebar h2,
-.right-sidebar h2 {
-    margin: 0;
-    padding: 12px;
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
 
 /* About Me */
 
@@ -244,15 +233,6 @@ main > h1 {
     font-style: italic;
 
     line-height: 1.5 !important;
-}
-/* Country Caption */
-
-.about-my-country p {
-    margin: 18px 0 0;
-
-    font-size: 1rem;
-
-    line-height: 1.65;
 }
 
 /* Right Bar */
