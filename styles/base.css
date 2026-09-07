@@ -125,34 +125,24 @@ main > h1 {
 
 /* Card Headers */
 
-.left-sidebar::before {
-    content: "About Me";
-
-    display: block;
-
+.left-sidebar h2,
+.right-sidebar h2 {
+    margin: 0;
     padding: 12px;
-
     background-color: var(--primary-color);
     color: var(--light-text);
-
     text-align: center;
-
     font-size: 1.25rem;
     font-weight: 700;
 }
 
-.right-sidebar::before {
-    content: "Web Dev Resources";
-
-    display: block;
-
+.left-sidebar h2,
+.right-sidebar h2 {
+    margin: 0;
     padding: 12px;
-
     background-color: var(--primary-color);
     color: var(--light-text);
-
     text-align: center;
-
     font-size: 1.25rem;
     font-weight: 700;
 }
