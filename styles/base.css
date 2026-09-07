@@ -1,16 +1,9 @@
 /* Global Style */
 
 :root {
-    --primary-color: #006b5b;
-    --secondary-color: #004d40;
-    --accent-color: #1b8a70;
-    --link-color: #087f5b;
+    --teal: #006b5b;
     --text-color: #202124;
-    --light-text: #ffffff;
-    --background-color: #ffffff;
-    --card-background: #ffffff;
-    --border-color: #d0d0d0;
-    --footer-color: #004d40;
+    --white: #ffffff;
 }
 
 * {
@@ -21,7 +14,7 @@ body {
     margin: 0;
     font-family: 'DM Sans', sans-serif;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--white);
     line-height: 125%;
 }
 
@@ -37,14 +30,14 @@ header #course-title {
     padding: 20px;
     text-align: center;
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--teal);
     font-weight: 300;
 }
 
 /* Navigation */
 
 nav {
-    background-color: var(--primary-color);
+    background-color: var(--teal);
 }
 
 .navigation {
@@ -67,7 +60,7 @@ nav {
     display: block;
     padding: 14px 10px;
 
-    color: var(--light-text);
+    color: var(--white);
     text-decoration: none;
 
     font-size: 1.1rem;
@@ -79,8 +72,8 @@ nav {
 
 .navigation a:hover,
 .navigation a:focus {
-    background-color: var(--secondary-color);
-    color: #ffffff;
+    background-color: var(--teal);
+    color: var(--white);
 }
 
 
@@ -98,7 +91,7 @@ main > h1 {
 
     font-size: 2.8rem;
     line-height: 1.2;
-    color: #111111;
+    color: var(--text-color);
 }
 
 /* Main Grid */
@@ -113,9 +106,9 @@ main > h1 {
 /* Card */
 
 .card {
-    background-color: var(--card-background);
+    background-color: var(--white);
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--text-color);
     border-radius: 10px;
 
     overflow: hidden;
@@ -129,8 +122,8 @@ main > h1 {
 .right-sidebar h2 {
     margin: 0;
     padding: 12px;
-    background-color: var(--primary-color);
-    color: var(--light-text);
+    background-color: var(--teal);
+    color: var(--white);
     text-align: center;
     font-size: 1.25rem;
     font-weight: 700;
@@ -257,22 +250,22 @@ main > h1 {
 }
 
 .resource-list a {
-    color: var(--link-color);
+    color: var(--teal);
     font-size: 1.05rem;
 }
 
 .resource-list a:hover {
-    color: var(--secondary-color);
+    color: var(--teal);
 }
 
 /* Links */
 
 a {
-    color: var(--link-color);
+    color: var(--teal);
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: var(--teal);
 }
 
 
@@ -283,8 +276,8 @@ a:hover {
 
     padding: 20px;
 
-    background-color: var(--footer-color);
-    color: var(--light-text);
+    background-color: var(--teal);
+    color: var(--white);
 
     text-align: center;
 }
