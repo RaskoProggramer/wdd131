@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: block;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+body {
+    font-family: "Astloch", system-ui;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.card {
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.right-sidebar {
+    min-height: 50px;
+    gap: 20px;
+}
+
+.left-sidebar {
+    min-height: 50px;
+}
+
+@media screen and (min-width : 64px){
+    header, main, footer {
+        margin: 1rem auto;
+        background-color: rgb(70, 172, 223);
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+}

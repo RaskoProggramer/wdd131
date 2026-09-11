@@ -1,0 +1,322 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   COLOR VARIABLES
+========================= */
+
+:root {
+    --primary-color: #1d4ed8;
+    --secondary-color: #1e3a8a;
+    --accent-color: #7c3aed;
+    --light-color: #f8fafc;
+    --text-color: #111827;
+    --white: #ffffff;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: "Astloch", system-ui, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    line-height: 1.5;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    width: 100%;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+
+/* Page title */
+
+nav h1 {
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+    list-style: none;
+    width: 100%;
+}
+
+
+/* Hide navigation on mobile */
+
+.navigation li {
+    display: none;
+}
+
+
+/* Navigation links */
+
+.navigation a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--white);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Hover / focus / active */
+
+.navigation a:hover,
+.navigation a:focus,
+.navigation a:active {
+    color: var(--white);
+    background-color: var(--accent-color);
+}
+
+
+/* Keyboard accessibility */
+
+.navigation a:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: -3px;
+}
+
+
+/* Show navigation when hamburger is clicked */
+
+.navigation.show li {
+    display: block;
+}
+
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+#menu {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+
+    display: block;
+
+    width: 3rem;
+    height: 3rem;
+
+    transform: translateY(-50%);
+
+    border: none;
+    border-radius: 0.25rem;
+
+    background-color: var(--light-color);
+    color: var(--text-color);
+
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Hamburger icon */
+
+#menu::before {
+    content: "≡";
+}
+
+
+/* Close icon */
+
+#menu.show::before {
+    content: "×";
+}
+
+
+/* Hamburger hover */
+
+#menu:hover,
+#menu:focus {
+    background-color: var(--white);
+    color: var(--accent-color);
+}
+
+
+/* Keyboard accessibility */
+
+#menu:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    width: min(90%, 1000px);
+    margin: 2rem auto;
+}
+
+
+/* Page heading */
+
+main h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/* =========================
+   TEMPLE GRID
+========================= */
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+
+/* =========================
+   FIGURES / CARDS
+========================= */
+
+figure {
+    margin: 0;
+    padding: 1rem;
+
+    background-color: var(--white);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+
+    text-align: center;
+
+    box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
+}
+
+
+/* Equal image sizes */
+
+figure img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 0.4rem;
+}
+
+
+/* Figure captions */
+
+figcaption {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+
+    text-align: center;
+
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media only screen and (min-width: 40rem) {
+
+    nav h1 {
+        font-size: 2rem;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 0;
+    }
+
+    .navigation a {
+        padding: 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+
+    /* Desktop: 3 columns */
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+    /* Equal desktop image height */
+
+    figure img {
+        height: 200px;
+    }
+}
