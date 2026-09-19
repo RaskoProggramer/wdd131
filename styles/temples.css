@@ -1,7 +1,4 @@
-/* =========================
-   RESET
-========================= */
-
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +6,8 @@
 }
 
 
-/* =========================
-   COLOR VARIABLES
-========================= */
 
+/* COLOR VARIABLES */
 :root {
     --primary-color: #1d4ed8;
     --secondary-color: #1e3a8a;
@@ -23,9 +18,8 @@
 }
 
 
-/* =========================
-   BODY
-========================= */
+
+/* BODY */
 
 body {
     font-family: "Astloch", system-ui, sans-serif;
@@ -36,11 +30,7 @@ body {
     line-height: 1.5;
 }
 
-
-/* =========================
-   HEADER / NAVIGATION
-========================= */
-
+/* HEADER / NAVIGATION */
 header {
     width: 100%;
 }
@@ -56,7 +46,6 @@ nav {
 
 
 /* Page title */
-
 nav h1 {
     padding: 1rem;
     text-align: center;
@@ -64,11 +53,7 @@ nav h1 {
     font-size: 1.5rem;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
+/* NAVIGATION */
 .navigation {
     list-style: none;
     width: 100%;
@@ -76,14 +61,12 @@ nav h1 {
 
 
 /* Hide navigation on mobile */
-
 .navigation li {
     display: none;
 }
 
 
 /* Navigation links */
-
 .navigation a {
     display: block;
     width: 100%;
@@ -101,9 +84,7 @@ nav h1 {
         color 0.3s ease;
 }
 
-
 /* Hover / focus / active */
-
 .navigation a:hover,
 .navigation a:focus,
 .navigation a:active {
@@ -113,50 +94,37 @@ nav h1 {
 
 
 /* Keyboard accessibility */
-
 .navigation a:focus-visible {
     outline: 3px solid var(--white);
     outline-offset: -3px;
 }
 
-
 /* Show navigation when hamburger is clicked */
-
 .navigation.show li {
     display: block;
 }
 
-
-/* =========================
-   HAMBURGER MENU
-========================= */
-
+/* HAMBURGER MENU */
 #menu {
-    position: absolute;
+    margin-left: auto;
+    position: relative;
     top: 50%;
     right: 1rem;
-
     display: block;
-
-    width: 3rem;
-    height: 3rem;
-
+    width: 44px;
+    height: 44px;
     transform: translateY(-50%);
-
     border: none;
     border-radius: 0.25rem;
-
+    background: transparent;
     background-color: var(--light-color);
     color: var(--text-color);
-
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
-
-    cursor: pointer;
-
+    align-items: end;
+    /* cursor: pointer; */
     text-align: center;
-
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
@@ -164,21 +132,22 @@ nav h1 {
 
 
 /* Hamburger icon */
-
 #menu::before {
     content: "≡";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
 /* Close icon */
-
 #menu.show::before {
     content: "×";
 }
 
 
 /* Hamburger hover */
-
 #menu:hover,
 #menu:focus {
     background-color: var(--white);
@@ -187,17 +156,12 @@ nav h1 {
 
 
 /* Keyboard accessibility */
-
 #menu:focus-visible {
     outline: 3px solid var(--white);
     outline-offset: 2px;
 }
 
-
-/* =========================
-   MAIN CONTENT
-========================= */
-
+/* MAIN CONTENT */
 main {
     width: min(90%, 1000px);
     margin: 2rem auto;
@@ -205,29 +169,20 @@ main {
 
 
 /* Page heading */
-
 main h2 {
     margin-bottom: 2rem;
     text-align: center;
     font-size: 2rem;
 }
 
-
-/* =========================
-   TEMPLE GRID
-========================= */
-
+/* TEMPLE GRID */
 .temple-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-
-/* =========================
-   FIGURES / CARDS
-========================= */
-
+/* FIGURES / CARDS */
 figure {
     margin: 0;
     padding: 1rem;
@@ -242,9 +197,7 @@ figure {
     box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
 }
 
-
 /* Equal image sizes */
-
 figure img {
     width: 100%;
     height: 220px;
@@ -256,20 +209,14 @@ figure img {
     border-radius: 0.4rem;
 }
 
-
 /* Figure captions */
-
 figcaption {
     margin-top: 0.75rem;
     font-size: 1rem;
     line-height: 1.4;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 .footer {
     margin-top: 2rem;
     padding: 1.5rem;
@@ -280,11 +227,7 @@ figcaption {
     color: var(--white);
 }
 
-
-/* =========================
-   DESKTOP
-========================= */
-
+/* DESKTOP */
 @media only screen and (min-width: 40rem) {
 
     nav h1 {
@@ -310,7 +253,6 @@ figcaption {
 
 
     /* Desktop: 3 columns */
-
     .temple-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
@@ -318,7 +260,6 @@ figcaption {
 
 
     /* Equal desktop image height */
-
     figure img {
         height: 200px;
     }
