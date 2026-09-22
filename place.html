@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mpho Rakgope">
+    <meta name="description" content="A webpage that shows Places">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+      <header>
+        <h1>Republic of South Africa</h1>
+    </header>
+
+    <main>
+   <picture>
+    <source
+        media="(max-width: 600px)"
+        srcset="images/bird.webp">
+    <img
+        src="images/feeding-birds.webp"
+        alt="Lemurs in Madagascar">
+</picture>
+
+    <div class="content">
+
+        <section class="data-card">
+            <h2>Data</h2>
+
+            <div class="data">
+                <p><strong>Area:</strong> 1,221,037 sq km</p>
+                <p><strong>Population:</strong> 65,640,274</p>
+                <p><strong>Capital:</strong> Pretoria</p>
+                <p><strong>Languages:</strong> 11 Official Languages</p>
+                <p><strong>Currency:</strong> Rand</p>
+                <p><strong>Time Zone:</strong> UTC+2</p>
+                <p><strong>Calling Code:</strong> +27</p>
+                <p><strong>Internet TLD:</strong> .za</p>
+            </div>
+        </section>
+
+        <section class="weather-card">
+            <h2>Weather <span>🌤️</span></h2>
+
+            <div class="weather-icon">
+                🌤️
+            </div>
+
+            <div class="weather">
+                <p><strong>Temperature:</strong> 10 °C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> 5 km/h</p>
+                <p><strong>Wind Chill:</strong>  <span id="windchill">N/A</span></p>
+            </div>
+        </section>
+
+    </div>
+</main>
+<footer class="footer">
+        <p>© <span id="currentyear"></span> Mpho Rakgope, South Africa</p>
+        <p><span id="lastupdated"></span></p>
+</footer>
+</body>
+</html>
