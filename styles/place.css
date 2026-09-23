@@ -125,6 +125,11 @@ main picture img {
     text-align: left;
 }
 
+.data-card h2::after {
+    content: " ☀";
+    float: right;
+}
+
 .data {
     padding: 0 15px 15px;
 }
