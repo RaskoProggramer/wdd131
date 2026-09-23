@@ -302,17 +302,23 @@ footer p {
 
         font-size: 2rem;
     }
-
+    
     .weather-card h2 span {
-        display: block;
+        float: none;
+        display: inline-block;
+        margin-left: 8px;
     }
 
-    .weather-icon {
-        font-size: 65px;
+    .weather-card h2 span img {
+        width: 32px;
+        height: 32px;
 
-        margin: 20px 0 25px;
+        vertical-align: middle;
+    }
 
-        text-align: center;
+    .weather-icon img {
+        width: 90px;
+        height: 90px;
     }
 
     .weather p {
