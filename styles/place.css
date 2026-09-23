@@ -126,7 +126,7 @@ main picture img {
 }
 
 .data-card h2::after {
-    content: " ☀";
+    content: "☀";
     float: right;
 }
 
