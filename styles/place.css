@@ -110,10 +110,6 @@ main picture img {
     justify-self: start;
 }
 
-.weather-card {
-    justify-self: end;
-}
-
 .data-card h2,
 .weather-card h2 {
     background-color: var(--red-color);
@@ -149,6 +145,7 @@ main picture img {
 
 .weather-card {
     padding-bottom: 18px;
+    justify-self: end;
 }
 
 
@@ -166,10 +163,7 @@ main picture img {
 
 .weather {
     padding: 0 15px;
-}
-
-.weather {
-    display: block;
+     display: block;
 }
 
 /* Footer */
@@ -271,6 +265,10 @@ footer p {
         background-color: var(--header-text);
         color: var(--text-color);
         text-align: center;
+    }
+
+    .data-card h2::after {
+        content: " ☀";
     }
 
     .data {
