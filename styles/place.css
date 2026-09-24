@@ -13,7 +13,7 @@
     --green-color: #00844a;
     --blue-color: #0066cc;
     --yellow-color: #ffd700;
-    --border-bottom: 17px solid #000000;
+    --border-bottom: 17px solid #0066cc;
     --card-background: rgba(255, 255, 255, 0.88);
 }
 
@@ -175,7 +175,7 @@ main picture img {
 footer {
     height: 135px;
 
-    background-color: var(--blue-color);
+    background-color: var(--text-color);
 
     color: var(--yellow-color);
 
