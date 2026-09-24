@@ -273,7 +273,7 @@ footer p {
     }
 
     .data-card h2::after {
-        content: " ☀";
+        content: none;
     }
 
     .data {
