@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="author" content="Mpho Rakgope">
+    <meta name="description" content="A temple album web page with description of the each temple">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Estonia&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Temple ALbum</h1>
+            <a id="menu" href="#menu"></a>
+            <ul class="navigation">
+		        <li><a href="#home">Home</a></li>
+		        <li><a href="#old">Old</a></li>
+		        <li><a href="#new">New</a></li>
+		        <li><a href="#large">Large</a></li>
+		        <li><a href="#small">Small</a></li>
+	        </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Home</h2>
+        <div id="temple-grid"> </div>
+    </main>
+    <footer class="footer">
+        <p>© <span id="currentyear"></span> Mpho Rakgope, South Africa</p>
+        <p><span id="lastupdated"></span></p>
+    </footer>
+</body>
+</html>
