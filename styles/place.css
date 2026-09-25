@@ -126,8 +126,7 @@ main picture img {
 }
 
 .data-card h2::after {
-    content: "☀";
-    float: right;
+    content: none;
 }
 
 .data {
@@ -273,7 +272,8 @@ footer p {
     }
 
     .data-card h2::after {
-        content: none;
+        content: "*";
+        float: right;
     }
 
     .data {
