@@ -142,4 +142,4 @@ document.querySelector("#small").addEventListener("click", () => {
   DisplayTemples(smallTemples);
 });
 
-// DisplayTemples(temples);
+DisplayTemples(temples);
