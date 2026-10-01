@@ -180,7 +180,7 @@ main h2 {
 
 
 /* TEMPLE GRID */
-.temple-grid {
+#temple-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -284,7 +284,7 @@ figure img {
 
 
     /* Temple grid - 3 columns */
-    .temple-grid {
+    #temple-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
@@ -299,27 +299,5 @@ figure img {
     /* Desktop temple name */
     figcaption h2 {
         font-size: 1.1rem;
-    }
-}
-
-
-/* =========================
-   LARGE DESKTOP
-   ========================= */
-
-@media only screen and (min-width: 64rem) {
-
-    main {
-        width: min(92%, 1400px);
-    }
-
-
-    .temple-grid {
-        gap: 2.5rem;
-    }
-
-
-    figure img {
-        height: 300px;
     }
 }
