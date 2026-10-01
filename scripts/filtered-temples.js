@@ -1,3 +1,28 @@
+const mainnav = document.querySelector('.navigation')
+const hamburger = document.querySelector('#menu');
+const year = document.querySelector("#currentyear");
+const lastModified = document.querySelector("#lastupdated");
+
+const today = new Date();
+
+year.textContent = today.getFullYear();
+
+lastModified.textContent = `Last Modification: ${new Intl.DateTimeFormat(
+    "en-US",
+    {
+        dateStyle: "full",
+        timeStyle: "medium"
+    }
+).format(new Date(document.lastModified))}`;
+
+
+hamburger.addEventListener('click', () => {
+	mainnav.classList.toggle('show');
+	hamburger.classList.toggle('show');
+});
+
+
+
 const temples = [
   {
     templeName: "Aba Nigeria",
