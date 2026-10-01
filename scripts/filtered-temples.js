@@ -82,25 +82,64 @@ const temples = [
 ];
 const gallery = document.querySelector("#temple-grid");
 
-temples.forEach((temple) => {
-    const figure = document.createElement("figure");
-    const caption = document.createElement("figcaption");
+function DisplayTemples(temples) {
+  gallery.innerHTML = "";
+  temples.forEach((temple) => {
+      const figure = document.createElement("figure");
+      const caption = document.createElement("figcaption");
 
-    caption.innerHTML = `
-        <h2>${temple.templeName}</h2>
-        <p>Location: ${temple.location}</p>
-        <p>Dedicated: ${temple.dedicated}</p>
-        <p>Area: ${temple.area.toLocaleString()} sq ft</p>
-    `;
+      caption.innerHTML = `
+          <h2>${temple.templeName}</h2>
+          <p>Location: ${temple.location}</p>
+          <p>Dedicated: ${temple.dedicated}</p>
+          <p>Area: ${temple.area.toLocaleString()} sq ft</p>
+      `;
+        
+      const img = document.createElement("img");
+          img.src = temple.imageUrl;
+          img.alt = temple.templeName;
+          img.loading = "lazy";
 
-    
-    const img = document.createElement("img");
-    img.src = temple.imageUrl;
-    img.alt = temple.templeName;
-    img.loading = "lazy";
+      figure.appendChild(img);
+      figure.appendChild(caption);
 
-    figure.appendChild(img);
-    figure.appendChild(caption);
+      gallery.appendChild(figure);
+  });
+}
 
-    gallery.appendChild(figure);
+document.querySelector("#home").addEventListener("click", () => {
+    DisplayTemples(temples);
 });
+
+document.querySelector("#old").addEventListener("click", () => {
+    const oldTemples = temples.filter((temple) => {
+      const year = parseInt(temple.dedicated);
+      return year < 1900;
+    });
+    DisplayTemples(oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", () => {
+    const newTemples = temples.filter((temple) => {
+      const year = parseInt(temple.dedicated);
+      console.log(year);
+      return year >= 2000;
+    });
+    DisplayTemples(newTemples);
+});
+
+document.querySelector("#large").addEventListener("click", () => {
+  const largeTemples = temples.filter((temple) => {
+    return temple.area > 90000;
+  });
+  DisplayTemples(largeTemples);
+});
+
+document.querySelector("#small").addEventListener("click", () => {
+  const smallTemples = temples.filter((temple) => {
+    return temple.area < 10000;
+  });
+  DisplayTemples(smallTemples);
+});
+
+// DisplayTemples(temples);
