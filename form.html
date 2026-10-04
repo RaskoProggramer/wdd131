@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="author" content="Mpho Rakgope">
+    <meta name="description"content="This is a web page for a product review form for customers.">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="thankyou.html" class="review">
+            <label for="product">Product Name</label>
+            <select name="product" id="product" required>
+                <option value="" disabled selected>Choose a product</option>
+            </select>
+            <fieldset class="rating">
+                <legend>Overall Rating</legend>
+                <div class="rating-options">
+                    <label>⭐<input type="radio" name="rating" value="1" required></label>
+                    <label>⭐⭐<input type="radio" name="rating" value="2"></label>
+                    <label>⭐⭐⭐<input type="radio" name="rating" value="3"></label>
+                    <label>⭐⭐⭐⭐<input type="radio" name="rating" value="4"></label>
+                    <label>⭐⭐⭐⭐⭐<input type="radio" name="rating" value="5"></label>
+                </div>
+            </fieldset>
+            <label for="installation-date">Date of Installation</label>
+            <input type="date" name="installation-date" id="installation-date" required>
+            <fieldset class="features">
+                <legend>Which feature did you find useful in the product?<span>(Check all that apply)</span></legend>
+                <label><input type="checkbox" name="feature" value="Durability"> Durability</label>
+                <label><input type="checkbox" name="feature" value="Usability" >Usability</label>
+                <label><input type="checkbox"  name="feature" value="Performance">Performance</label>
+                <label><input type="checkbox" name="feature" value="Design">Design</label>
+            </fieldset>
+            <label for="review">Written Review <span>(Optional)</span></label>
+            <textarea name="review" id="review"></textarea>
+            <label for="name">Your Name <span>(Optional)</span></label>
+            <input type="text" name="name" id="name">
+            <input type="submit" value="Post Review" id="post-review">
+        </form>
+    </main>
+    <footer class="footer">
+        <p>© <span id="currentyear"></span>Mpho Rakgope, South Africa</p>
+        <p><span id="lastupdated"></span></p>
+    </footer>
+</body>
+</html>
