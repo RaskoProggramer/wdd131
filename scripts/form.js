@@ -76,5 +76,5 @@ if (reviewCount) {
 
     localStorage.setItem("reviewCount", count);
 
-    reviewCount.textContent = count;
+    reviewCount.innerHTML = count;
 }
