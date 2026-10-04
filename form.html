@@ -20,16 +20,16 @@
         <form method="get" action="review.html" class="review">
             <label for="product">Product Name</label>
             <select name="product" id="product" required>
-                <option value="" disabled selected>Choose a product</option>
+                <option value="" disabled selected>Select a Product</option>
             </select>
             <fieldset class="rating">
                 <legend>Overall Rating</legend>
                 <div class="rating-options">
-                    <label>⭐<input type="radio" name="rating" value="1" required></label>
-                    <label>⭐⭐<input type="radio" name="rating" value="2"></label>
-                    <label>⭐⭐⭐<input type="radio" name="rating" value="3"></label>
-                    <label>⭐⭐⭐⭐<input type="radio" name="rating" value="4"></label>
-                    <label>⭐⭐⭐⭐⭐<input type="radio" name="rating" value="5"></label>
+                    <label>⭐<input type="radio" name="rating" value="1" id="rating" required></label>
+                    <label>⭐⭐<input type="radio" name="rating" value="2" id="rating" required></label>
+                    <label>⭐⭐⭐<input type="radio" name="rating" value="3" id="rating" required></label>
+                    <label>⭐⭐⭐⭐<input type="radio" name="rating" value="4" id="rating" required></label>
+                    <label>⭐⭐⭐⭐⭐<input type="radio" name="rating" value="5" id="rating" required></label>
                 </div>
             </fieldset>
             <label for="installation-date">Date of Installation</label>
