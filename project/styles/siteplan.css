@@ -6,7 +6,6 @@
 
 :root {
     --primary-color: #D4AF37;
-    --accent-color: #0057B8;
     --text-color: #111111;    
     --white: #FFFFFF;
     --border: 6px solid #D4AF37;
@@ -98,7 +97,7 @@ main img {
 }
 
 footer {
-    background-color: var(--accent-color);
+    background-color: var(--text-color);
     color: var(--white);
     text-align: center;
     padding: 1.5rem;
