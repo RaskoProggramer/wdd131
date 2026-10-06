@@ -103,7 +103,7 @@ footer {
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
-    border-top: 5px solid var(--primary-color);
+    border-top: var(--border);
 }
 
 footer p {
