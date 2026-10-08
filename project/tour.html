@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gauteng Tour</title>
+    <link rel="stylesheet" href="styles/tour.css">
+    <script src="scripts/tour.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Gauteng Tour Guide</h1>
+        <nav class="navigation">
+            <h1>Gauteng Tour Guard</h1>
             <button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
-            <ul class="navigation">
+            <ul class="navigation-mune">
 		        <li><a href="#home">Home</a></li>
 		        <li><a href="#Tour">Tour</a></li>
 		        <li><a href="#Contact Us">Contact Us</a></li>
@@ -19,7 +21,7 @@
     </header>
     <main>
         <h2>Short Left Gauteng</h2>
-        <div class="card"></div>
+        <div id="attraction-grid" class="attraction-grid"></div>
     </main>
     <footer class="footer">
         <p>© <span id="currentyear"></span> Mpho Rakgope, South Africa</p>

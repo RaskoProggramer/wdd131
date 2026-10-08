@@ -1,13 +1,28 @@
 const year = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastupdated");
+const card = document.querySelector("#card")
+const menuButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation");
 
-// Use the Date object
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("show");
+
+    const menuOpen = navigation.classList.contains("show");
+
+    menuButton.setAttribute("aria-expanded", menuOpen);
+
+    menuButton.setAttribute(
+        "aria-label",
+        menuOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+    menuButton.textContent = menuOpen ? "✕" : "☰";
+});
+
 const today = new Date();
 
-// Display the current year
 year.textContent = today.getFullYear();
 
-// Display the last modified date and time with seconds
 lastModified.textContent = `Last Modification: ${new Intl.DateTimeFormat(
     "en-US",
     {
@@ -42,8 +57,8 @@ const attractions = [
         name: "Freedom Park",
         location: "Pretoria",
         category: "Heritage",
-        imageUrl: "",
-        reference: ""
+        imageUrl: "https://sahistory.org.za/sites/default/files/place%20images/freedom_park.png",
+        reference: "https://sahistory.org.za/place/freedom-park"
     },
     {
         name: "Hector Pieterson Memorial",
@@ -56,17 +71,52 @@ const attractions = [
         name: "Lion & Safari Park",
         location: "Broederstroom",
         category: "Wildlife",
-        imageUrl: "",
-        reference: ""
+        imageUrl: "https://www.tripadvisor.co.za/AttractionProductReview-g312578-d34293989-Johannesburg_Harties_Aerial_Cableway_Safari_Park_Tour-Johannesburg_Greater_Johanne.html",
+        reference: "https://www.tripadvisor.co.za/Attraction_Review-g1910063-d481147-Reviews-Lion_and_Safari_Park-Broederstroom_Madibeng_North_West_Province.html"
     },
-    {
-        name: "Constitution Hill",
-        location: "Johannesburg",
-        category: "History"
-    },
-    {
-        name: "Walter Sisulu Botanical Gardens",
-        location: "Roodepoort",
-        category: "Nature"
-    }
+    // {
+    //     name: "Constitution Hill",
+    //     location: "Johannesburg",
+    //     category: "History",
+    //     imageUrl: "https://live.southafrica.net/media/149645/17504796308_30211e640f_o.jpg?anchor=center&mode=crop&quality=100&width=414&height=340&bgcolor=white&rnd=131570396400000000",
+    //     reference: "https://www.southafrica.net/gl/en/travel/article/place-of-human-rights-constitution-hill-johannesburg"
+    // }
 ];
+
+const attractionGrid = document.querySelector("#attraction-grid");
+
+function displayAttractions() {
+
+    attractionGrid.innerHTML = "";
+
+    attractions.forEach(attraction => {
+
+        const card = document.createElement("article");
+
+        card.classList.add("attraction-card");
+
+        card.innerHTML = `
+            <img 
+                src="${attraction.image}" 
+                alt="${attraction.name}"
+                loading="lazy"
+            >
+
+            <div class="card-content">
+                <h3>${attraction.name}</h3>
+
+                <p><strong>Location:</strong> ${attraction.location}</p>
+
+                <p><strong>Category:</strong> ${attraction.category}</p>
+
+                <p class="price">
+                    Entrance: ${attraction.price}
+                </p>
+            </div>
+        `;
+
+        attractionGrid.appendChild(card);
+    });
+}
+
+displayAttractions();
