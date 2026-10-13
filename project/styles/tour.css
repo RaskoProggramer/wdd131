@@ -1,18 +1,8 @@
-
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-/* =========================
-   COLORS
-========================= */
 
 :root {
     --primary-color: #D4AF37;
@@ -27,11 +17,6 @@
     --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-
-/* =========================
-   BODY
-========================= */
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--white);
@@ -43,12 +28,6 @@ body {
 img {
     max-width: 100%;
 }
-
-
-/* =========================
-   HEADER
-   MOBILE FIRST
-========================= */
 
 header {
     width: 100%;
@@ -65,11 +44,6 @@ header h1 {
     padding: 1rem 4.5rem 1rem 1rem;
     overflow-wrap: break-word;
 }
-
-
-/* =========================
-   MOBILE MENU BUTTON
-========================= */
 
 #menu {
     display: flex;
@@ -101,12 +75,6 @@ header h1 {
 #menu.show::before {
     content: "✕";
 }
-
-
-/* =========================
-   NAVIGATION
-   MOBILE FIRST
-========================= */
 
 nav {
     width: 100%;
@@ -155,26 +123,15 @@ nav {
     color: var(--dark-color);
 }
 
-
-/* Show links when menu opens */
-
 .navigation.show li {
     display: block;
 }
-
-
-/* Keyboard accessibility */
 
 #menu:focus-visible,
 .navigation a:focus-visible {
     outline: 3px solid var(--white);
     outline-offset: 2px;
 }
-
-
-/* =========================
-   MAIN CONTENT
-========================= */
 
 main {
     width: 100%;
@@ -183,11 +140,6 @@ main {
 h2 {
     text-align: center;
 }
-
-
-/* =========================
-   ATTRACTIONS SECTION
-========================= */
 
 .attractions {
     width: 100%;
@@ -205,12 +157,6 @@ h2 {
     color: var(--text-color);
 }
 
-
-/* =========================
-   ATTRACTION GRID
-   MOBILE FIRST
-========================= */
-
 .attraction-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -218,11 +164,6 @@ h2 {
     gap: 1.25rem;
     width: 100%;
 }
-
-
-/* =========================
-   ATTRACTION CARD
-========================= */
 
 .attraction-card {
     min-width: 0;
@@ -241,13 +182,8 @@ h2 {
 
 .attraction-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
 }
-
-
-/* =========================
-   CARD IMAGE
-========================= */
 
 .attraction-card img {
     display: block;
@@ -257,11 +193,6 @@ h2 {
 
     object-fit: cover;
 }
-
-
-/* =========================
-   CARD CONTENT
-========================= */
 
 .card-content {
     padding: 1rem;
@@ -279,14 +210,9 @@ h2 {
     overflow-wrap: break-word;
 }
 
-
-/* =========================
-   PRICE
-========================= */
-
 .price {
     background-color: var(--accent-color);
-    color: var(--white);
+    color: var(--text-color);
 
     padding: 0.7rem;
     border-radius: 5px;
@@ -294,11 +220,6 @@ h2 {
     font-weight: bold;
     margin-top: 1rem;
 }
-
-
-/* =========================
-   REFERENCE LIST
-========================= */
 
 .reference {
     list-style: none;
@@ -313,11 +234,6 @@ h2 {
     color: #176B32;
     overflow-wrap: anywhere;
 }
-
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
     width: 100%;
@@ -335,39 +251,6 @@ footer p {
     margin: 0;
     font-size: 1rem;
 }
-
-
-/* =========================
-   TABLETS
-   600px AND ABOVE
-========================= */
-
-@media screen and (min-width: 600px) {
-
-    .attractions {
-        padding: 1.5rem;
-        margin: 2rem auto;
-    }
-
-    .attraction-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.5rem;
-    }
-
-    .attraction-card img {
-        height: 210px;
-    }
-
-    .attractions h2 {
-        font-size: 1.75rem;
-    }
-}
-
-
-/* =========================
-   DESKTOP NAVIGATION
-   768px AND ABOVE
-========================= */
 
 @media screen and (min-width: 768px) {
 
@@ -423,11 +306,6 @@ footer p {
 }
 
 
-/* =========================
-   LARGE DESKTOP
-   900px AND ABOVE
-========================= */
-
 @media screen and (min-width: 900px) {
 
     .attraction-grid {
@@ -437,22 +315,5 @@ footer p {
 
     .attraction-card img {
         height: 220px;
-    }
-}
-
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
     }
 }

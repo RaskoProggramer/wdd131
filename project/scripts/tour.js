@@ -30,42 +30,48 @@ const attractions = [
         location: "Johannesburg",
         category: "History",
         image: "images/apartheid-museum.jpg",
-        reference: "https://www.apartheidmuseum.org"
+        reference: "https://www.apartheidmuseum.org",
+        price: "R200"
     },
     {
         name: "Cradle of Humankind",
         location: "West Rand",
         category: "Heritage",
         image: "images/cradle-of-humankind.jpg",
-        reference: "https://www.maropeng.co.za"
+        reference: "https://www.maropeng.co.za",
+        price: "R250"
     },
     {
         name: "Sterkfontein Caves",
         location: "Krugersdorp",
         category: "Nature",
         image: "images/sterkfontein-caves.jpg",
-        reference: "https://sterkfonteincaves.wits.ac.za/caves/"
+        reference: "https://sterkfonteincaves.wits.ac.za/caves/",
+        price: "R350"
     },
     {
         name: "Freedom Park",
         location: "Pretoria",
         category: "Heritage",
         image: "images/freedom-park.jpg",
-        reference: "https://sahistory.org.za/place/freedom-park"
+        reference: "https://sahistory.org.za/place/freedom-park",
+        price: "R70"
     },
     {
         name: "Hector Pieterson Memorial",
         location: "Soweto",
         category: "History",
         image: "images/hector-pieterson-memorial.jpg",
-        reference: "https://www.cipdh.gob.ar/memorias-situadas/en/lugar-de-memoria/memorial-y-museo-hector-pieterson/"
+        reference: "https://www.cipdh.gob.ar/memorias-situadas/en/lugar-de-memoria/memorial-y-museo-hector-pieterson/",
+        price: "Free"
     },
     {
         name: "Lion & Safari Park",
         location: "Broederstroom",
         category: "Wildlife",
         image: "images/lion-safari.jpg",
-        reference: "https://www.tripadvisor.co.za/Attraction_Review-g1910063-d481147-Reviews-Lion_and_Safari_Park-Broederstroom_Madibeng_North_West_Province.html"
+        reference: "https://www.tripadvisor.co.za/Attraction_Review-g1910063-d481147-Reviews-Lion_and_Safari_Park-Broederstroom_Madibeng_North_West_Province.html",
+        price: "R280"
     },
 ];
 
@@ -107,6 +113,24 @@ function displayAttractions() {
 }
 
 displayAttractions();
+
+const referenceList = document.querySelector(".reference");
+
+function displayReference() {
+    const referenceList = document.querySelector(".reference");
+    referenceList.innerHTML = "";
+    attractions.forEach(reference => {
+        referenceList.innerHTML += `
+            <li>
+                <a href="${reference.reference}" target="_blank" rel="noopener noreferrer">
+                ${reference.name}
+            </a>
+        </li>
+    `;
+    });
+}
+
+displayReference();
 
 
 const products = [
