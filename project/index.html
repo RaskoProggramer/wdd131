@@ -4,22 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gauteng Tour</title>
+    <meta name="author" content="Mpho Rakgope">
+    <meta name="description" content="A web page for touring in gauteng province and allows you to make booking">
+    <link rel="stylesheet" href="styles/tour.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/tour.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Gauteng Tour Guide</h1>
-            <button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        <h1>Gauteng Tour Guard</h1>
+        <a id="menu" href="#"></a>
+        <nav class="navigation">
             <ul class="navigation">
-		        <li><a href="#home">Home</a></li>
-		        <li><a href="#Tour">Tour</a></li>
-		        <li><a href="#Contact Us">Contact Us</a></li>
+		        <li><a href="index.html">Home</a></li>
+		        <li><a href="tour.html">Tour</a></li>
+		        <li><a href="contact-us.html">Contact Us</a></li>
 	        </ul>
         </nav>
     </header>
     <main>
-        <h2>Short Left Gauteng</h2>
-        <div class="card"></div>
+    <section class="hero" id="home">
+        <img src="images/gauteng.jpg" alt="Johannesburg skyline at sunset in Gauteng" class="hero-image">
+        <div class="hero-content">
+            <p class="hero-eyebrow">DISCOVER SOUTH AFRICA</p>
+            <h2>Explore Gauteng</h2>
+            <p class="hero-caption">Vibrant cities, rich history, and unforgettable experiences await you.</p>
+            <a href="#tour" class="hero-button">Discover Our Tours &rarr;</a>
+        </div>
+    </section>
+    </section>
+       <section class="features">
+        <article class="feature">
+            <h3>Iconic Attractions</h3>
+            <p>Discover remarkable landmarks and cultural sites.</p>
+        </article>
+        <article class="feature">
+            <h3>Safety First</h3>
+            <p>Explore with safety and comfort in mind.</p>
+        </article>
+        <article class="feature">
+            <h3>Local Knowledge</h3>
+            <p>Experience Gauteng through a local perspective.</p>
+        </article>
+        <article class="feature">
+            <h3>Memorable Experiences</h3>
+            <p>Make every journey a story worth sharing.</p>
+        </article>
+        </section>
     </main>
     <footer class="footer">
         <p>© <span id="currentyear"></span> Mpho Rakgope, South Africa</p>

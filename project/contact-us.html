@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gauteng Tour</title>
+    <meta name="author" content="Mpho Rakgope">
+    <meta name="description" content="A web page for touring in gauteng province and allows you to make booking">
+    <link rel="stylesheet" href="styles/tour.css">
+    <link rel="stylesheet" href="styles/contact-us.css">
+    <script src="scripts/tour.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Gauteng Tour Guard</h1>
-            <button id="menu" aria-label="Open navigation menu" aria-expanded="false">
-    ☰
-</button>
+        <h1>Gauteng Tour Guard</h1>
+        <a id="menu" href="#"></a>
+        <nav class="navigation">
             <ul class="navigation">
 		        <li><a href="index.html">Home</a></li>
 		        <li><a href="tour.html">Tour</a></li>
@@ -20,8 +23,116 @@
         </nav>
     </header>
     <main>
-        <h2>Short Left Gauteng</h2>
-        <div class="card"></div>
+        <main>
+        <section class="contact-intro">
+            <h2>Let's Plan Your Gauteng Adventure</h2>
+            <p>
+                Ready to explore Gauteng? Complete the booking form
+                below and we'll get in touch to discuss your tour.
+            </p>
+        </section>
+
+        <section class="booking-section">
+            <div class="booking-info">
+                <h2>Get in Touch</h2>
+
+                <p>
+                    Have questions about our tours or need help
+                    planning your visit? Send us a message.
+                </p>
+
+                <h3>Booking Information</h3>
+                <p>
+                    Submitting this form is a booking request.
+                    Your booking is not confirmed until we contact you.
+                </p>
+            </div>
+
+            <form method="get" action="thankyou.html" id="booking-form">
+                <h2>Book a Tour</h2>
+
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        autocomplete="tel"
+                        placeholder="e.g. 082 123 4567"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="tour">Choose Your Tour</label>
+                    <select id="tour" name="tour" required>
+                        <option value="">Select a tour</option>
+                       
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of People</label>
+                        <input
+                            type="number"
+                            id="guests"
+                            name="guests"
+                            min="1"
+                            max="50"
+                            value="1"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Requests</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Tell us about your interests or any special requirements..."
+                    ></textarea>
+                </div>
+
+                <button type="submit">Submit Booking Request</button>
+
+                <p id="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
     </main>
     <footer class="footer">
         <p>© <span id="currentyear"></span> Mpho Rakgope, South Africa</p>
